@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>about</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="textillate-master/assets/animate.css">
+
+    <style>
+        .headerBg {
+            height: 70vh;
+            width: 100%;
+            background-image: url("images/piano.jpg");
+            background-size: contain no-repeat;
+            display: table;
+            background-attachment: fixed;
+            background-position: center top;
+        }
+
+        .main h2 {
+            color: #F5B174;
+            padding: 50px 50px 0 50px;
+        }
+
+        .main .boxL {
+            width: 200px;
+            border: 2px solid #F5B174;
+            margin: 2px 40px 0 40px;
+        }
+
+        .contact {
+            padding: 60px 0 40px 0;
+        }
+
+        .contact ul {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px 0;
+
+        }
+
+        .contact .item {
+            display: flex;
+            color: #D58C4B;
+        }
+
+        .item .itemLi {
+            width: 20px;
+            height: 20px;
+            margin: 0 6px;
+            /* overflow: hidden; */
+        }
+
+        .item .itemLi .itemImg {
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
+        }
+
+        .map {
+            max-width: 700px;
+            height: 400px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
+        }
+
+        .icon {
+            display: flex;
+            justify-content: flex-end;
+            transform: translateX(-90px);
+            padding-bottom: 50px;
+        }
+
+        .icon li {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+        }
+
+        .icon li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon li img:hover{
+            filter: brightness(150%);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 50px;
+
+
+        }
+
+        .form .please {
+            /* text-align: center; */
+        }
+
+        .form .formUl {
+            /* display: flex; */
+            /* max-width: 960px; */
+            /* margin: 5px auto; */
+        }
+
+        .form .form-text {
+            color: #6e4829 !important;
+        }
+
+        .formLi {
+            font-size: 1.1rem;
+        }
+
+        .form p {
+            color: #F5B174;
+        }
+
+        .form .formUl .text {
+            background: #000000;
+            width: 200px;
+            border-radius: 0%;
+            border: 4px solid #191007;
+            /* margin: 0 auto; */
+            color: #F5B174;
+        }
+
+        .question li {
+            color: #F5B174;
+        }
+
+        .question .text {
+            background: #000000;
+            border: 4px solid #191007;
+            width: 300px;
+            height: 200px;
+            color: #F5B174;
+            resize: none;
+        }
+       
+        
+
+        .checkbox {
+            /* background-color: #D58C4B; */
+        }
+
+        .question .button {
+            background: #22180E;
+            width: 90px;
+            padding: 4px 0;
+            margin: 0 auto;
+        }
+
+        .question .btn {
+            color: #D58C4B;
+
+        }
+
+        .question .agree {
+            max-width: 400px;
+            margin: 0 auto;
+            /* padding: 5px ; */
+        }
+
+        .active1:hover {
+            background: #593A1E;
+            color: #F5B174;
+
+        }
+
+        .question .button {
+            margin: 10px auto;
+            border-radius: 10%;
+        }
+
+        /* .agree{
+            text-align: center;
+            margin: 0;
+        } */
+
+        .checkbox {
+            margin-right: 5px;
+            margin-left: -15px;
+        }
+
+        /* .question .checkG{
+            display: flex;
+        } */
+        .footer {
+            background: #140E09;
+
+        }
+
+        .footer p {
+            color: #D58C4B;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 576px) {
+
+            .headerBg {
+            height: 50vh;
+            width: 100%;
+            }
+
+            .main h2 {
+                padding: 50px 50px 0 50px;
+            }
+            .item li,img{
+                font-size: 5px;
+                margin-left: 40px ;
+            }
+           
+
+            .agree {
+                width: 200px;
+                /* text-align: start; */
+            }
+
+            .map {
+                max-width: 350px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class=" wrapper">
+        <div class="headerBg">
+            <!-- <img class="bgi" src="images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt=""> -->
+        </div>
+        <nav class="top">
+            <div class="header1">
+                <div class="logo">
+                    <figure class="musicFigure"><img class="musicImg" src="icon/itunes-note-brands2.png" alt="">
+                    </figure>
+                    <a class="home" href="index.html" style="text-decoration:none;">
+                        <h1>ROYAL ACADEMY <br> OF MUSIC</h1>
+                    </a>
+                </div>
+                <div class="menu">
+                    <li class="titleA"><a href="class.html">CLASS</a></li>
+                    <li class="titleA"><a href="teacher.html">TEACHERS</a></li>
+                    <li class="titleA"><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <div class="menu2">
+                            <div class="menu2-1">
+                                <div class="bar bar1 transition"></div>
+                                <div class="bar bar2 transition"></div>
+                                <div class="bar bar3 transition"></div>
+                                <ul>
+                                    <li><a href="class.html">CLASS</a></li>
+                                    <li><a href="teacher.html">TEACHERS</a></li>
+                                    <li><a href="about.html">ABOUT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main class="main wrapper">
+        <h2 class="tlt" data-in-effect="flash">ABOUT</h2>
+        <div class="boxL"></div>
+        <div class="contact">
+            <ul class="item">
+                <li class="itemLi"><img class="itemImg" src="icon/phone.svg" alt=""></li>
+                <li>02-2312-0063 / 09-7985-8156</li>
+            </ul>
+            <ul class="item">
+                <li class="itemLi"><img class="itemImg" src="icon/map.svg" alt=""></li>
+                <li>Marylebone Rd, Marylebone, London NW1 5HT</li>
+            </ul>
+            <ul class="item">
+                <li class="itemLi"><img class="itemImg" src="icon/envelope.svg" alt=""></li>
+                <li>Music-class@gmail.com</li>
+            </ul>
+        </div>
+        <ul class="icon">
+            <li><img src="icon/line.svg" alt=""></li>
+            <li><img src="icon/facebook.svg" alt=""></li>
+            <li><img src="icon/instagram.svg" alt=""></li>
+        </ul>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9929.80621131005!2d-0.1517086!3d51.523277199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x313794566d83247f!2z6Iux5ZyL55qH5a626Z-z5qiC5a246Zmi!5e0!3m2!1szh-TW!2stw!4v1592377168305!5m2!1szh-TW!2stw"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="form">
+            <p class="please">Please let us know if you have any questions.</p>
+            <ul class="formUl">
+                <li class="formLi ">
+                    <p>NAME</p>
+                </li>
+                <li> <input type="text" class="text">
+                </li>
+            </ul>
+            <ul class="formUl">
+                <li class="formLi">
+                    <p>E-MAIL</p>
+                </li>
+                <li> <input type="email" class="text">
+                    <small class="form-text ">We'll never share your email with anyone else.</small></li>
+            </ul>
+            <ul class="formUl">
+                <li class="formLi">
+                    <p>PHONE</p>
+                </li>
+                <li> <input type="tel" class="text ">
+                    <small class="form-text ">We'll never share your phone with anyone else.</small></li>
+            </ul>
+            <ul class="question">
+                <li>What is your question or information request?</li>
+                <li> <textarea class="text " id="exampleFormControlTextarea1" rows="3"></textarea>
+                </li>
+
+
+                <li class="agree"><input class="checkbox" type="checkbox">I hereby acknowledge that I have read the
+                    contents of this Agreement and give my consent.</li>
+
+                <li class="button"><button type="button" class="btn btn-primery" id="send" disabled>SUBMIT</button></li>
+            </ul>
+
+        </div>
+
+    </main>
+    <footer class="footer wrapper">
+        <p>©Copyright2020 Music Class</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/header.js"></script>
+    <script src="textillate-master/assets/jquery.lettering.js"></script>
+    <script src="textillate-master/jquery.textillate.js"></script>
+    <script>
+        $(function () {
+            $('.tlt').textillate();
+        })
+    </script>
+
+    <script>
+
+
+
+
+
+        $(":checkbox").click(function () {
+            console.log(".checkbox")
+            let checked = $(this).prop("checked")
+            $("#send").prop("disabled", !checked)
+            $(".button").toggleClass("active1")
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>index </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="stylesheet" href="textillate-master/assets/animate.css">
+
+
+
+   
+    <style>
+
+
+
+        /* * {
+            box-sizing: border-box;
+        }
+        body{
+            background: #000000;
+
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            justify-content: space-between;
+            background: #000000;
+        }
+
+        .headerBg {
+
+            position: relative;
+
+        }
+
+        .headerBg .bgi {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+        nav{
+            transition: .8s;
+        }
+        nav.hideNav{
+            transform: translateY(-108px);
+            background: transparent;
+
+        }
+        .wrapper .top {
+            width: 100%;
+       
+            position: fixed;
+            top: 0;
+            z-index: 1;
+
+        }
+
+
+        .header1 {
+            max-width: 960px;
+            display: flex;
+            justify-content: space-between;
+            background: #22180e83;
+
+
+
+        }
+
+        .header1 .logo {
+            display: flex;
+            margin: 5px;
+
+
+        }
+
+        .header1 .logo .musicFigure {
+            width: 37px;
+            height: 43px;
+            overflow: hidden;
+         
+            margin: 5px 10px;
+
+
+
+        }
+
+        .header1 .logo h1 {
+            margin: 0;
+            background:  linear-gradient(to right,#D58C4B,#ffcb98,#D58C4B,#ffcb98);
+            color: transparent;
+            -webkit-background-clip: text;
+      
+        }
+
+        .header1 .logo .musicFigure .musicImg {
+            height: 100%;
+            width: 100%;
+       
+        }
+
+        .header1 .menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .header1 .menu li {
+            flex-direction: column;
+
+            margin: 10px 20px;
+        }
+
+        .header1 .menu li a {
+            color: #F5B174;
+        }
+
+
+
+        .transition {
+            transition: 0.4s;
+        }
+
+        .menu2 {
+            display: none;
+       
+            margin: 0 auto
+        }
+
+        .menu2-1 {
+            display: inline-block;
+            cursor: pointer;
+            padding: 0 0 0 2px;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bar {
+            width: 36px;
+            height: 6px;
+            background: #F5B174;
+            margin: 6px 0;
+            border-radius: 2px;
+        }
+
+        .active .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+            transform: rotate(-45deg) translate(-9px, 7px);
+        }
+
+        .active .bar2 {
+            opacity: 0;
+        }
+
+        .active .bar3 {
+            -webkit-transform: rotate(45deg) translate(-9px, -8px);
+            transform: rotate(45deg) translate(-9px, -8px);
+        }
+
+        .menu2-1.active ul {
+            opacity: 1;
+            max-height: 300px;
+            margin-left: -60px;
+            margin-top: 16px;
+        }
+
+        .menu2-1 ul {
+            background: #22180ea8;
+            position: absolute;
+            transition: .4s;
+            opacity: 0;
+            overflow: hidden;
+            max-height: 0;
+        }
+
+        .menu2-1 ul li a {
+            display: block;
+            padding: 6px 10px;
+            text-decoration: none;
+            color: #F5B174;
+
+        }
+
+        .menu2-1 ul li a:hover {
+          
+            border-bottom:1px solid #F5B174;
+        } */
+
+        /* ............................... */
+
+
+        .main h2 {
+            color: #F5B174;
+            padding: 50px 50px 0 50px;
+           
+
+        }
+
+        .main .boxL {
+            width: 200px;
+            border: 2px solid #F5B174;
+            margin: 2px 40px 0 40px;
+        }
+
+        .main .subtitle {
+            color: #F5B174;
+            font-size: 2rem;
+            text-align: center;
+            padding: 10px;
+           
+
+        }
+        #slideImages{
+            max-width: 800px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        .slider{
+            padding-bottom: 50px;
+        }
+        /* 
+        .slider {
+            max-width: 800px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .slideWrapper .slideImages {
+            left: 0;
+            transition: .5s;
+        }
+
+        .slideImages li {
+            width: 800px;
+            height: 400px;
+        }
+
+        .slideImages img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .slideDots {
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            padding: 5px;
+            margin: 20px 0;
+
+        }
+
+        .slideDots li {
+            width: 35px;
+            height: 10px;
+            background:#3D2817;
+            margin: 0 8px;
+            border-radius: 10%;
+        }
+
+        .slideDots li:hover,
+        .slideDots li.active {
+            background: #D58C4B;
+        } */
+
+
+
+
+
+
+        .featured li {
+            padding: 20px;
+        }
+
+        .main .featured img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+     
+        }
+
+        .main .featured p {
+            color: #D58C4B;
+            transition: .8s;
+            
+        }
+
+        .main .featured .item1 {
+            display: flex;
+            align-items: center;
+            /* text-align: center; */
+        }
+
+        #item1.opacity{
+            opacity: 0;
+        }
+
+        .main .featured .item1Li {
+            max-width: 550px;
+            margin: 0 30px;
+            transition: .8s;
+        }
+
+        #item1P.opacity{
+            opacity: 0;
+        }
+
+        #item2.opacity {
+            opacity: 0;
+        }
+
+        .item2 .item2Li {
+            max-width: 680px;
+            /* max-height: 200px; */
+            margin: 0 20px;
+            transition: .8s;
+
+        }
+        #item2P.opacity{
+            opacity: 0;
+        }
+        .item2 p{
+            margin-left: -150px;
+            /* transform: translateX(-120px); */
+            transition: .8s;
+        }
+
+        .video {
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+        .footer {
+            background: #140E09;
+
+        }
+
+        .footer p {
+            color: #D58C4B;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 576px){
+            /* .header1 .logo h1{
+                font-size: 1.5rem;
+            }
+            .titleA{
+                display: none;
+            }
+            .menu2{
+                display: block;
+            } */
+
+
+            #slideImages{
+                width: 300px;
+                height: 200px;
+            }
+            .featured .item1{
+                flex-direction: column;
+            }
+            .item2 p{
+                margin-left: 0;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class=" wrapper">
+        
+            <div class="headerBg">
+                <img class="bgi" src="images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="">
+            </div>
+       
+       
+        <nav class="top" >
+            <div class="header1" >
+                <div class="logo">
+                    <figure class="musicFigure"><img class="musicImg" src="icon/itunes-note-brands2.png" alt="">
+                    </figure>
+                    <a class="home " href="index.html" style="text-decoration:none;"><h1 >ROYAL ACADEMY <br> OF MUSIC</h1></a>
+                </div>
+                <div class="menu">
+                    <li class="titleA"  ><a href="class.html">CLASS</a></li>
+                    <li class="titleA"><a href="teacher.html">TEACHERS</a></li>
+                    <li class="titleA"><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <div class="menu2">
+                            <div class="menu2-1">
+                                <div class="bar bar1 transition"></div>
+                                <div class="bar bar2 transition"></div>
+                                <div class="bar bar3 transition"></div>
+                                <ul>
+                                    <li><a href="class.html">CLASS</a></li>
+                                    <li><a href="teacher.html">TEACHERS</a></li>
+                                    <li><a href="about.html">ABOUT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="main wrapper">
+        <h2>NEWS</h2>
+        <div class="boxL"></div>
+        <div class="subtitle">ACTIVITY</div>
+        <div class="slideWrapper">
+            <div class="slider">
+                <ul id="slideImages" class="slideImages d-flex  ">
+                    <!-- <li><img src="images/activity1.png"></li>
+                    <li><img src="images/activity2.png"></li>
+                    <li><img src="images/activity3.png"></li>
+                    <li><img src="images/activity4.png"></li> -->
+                </ul>
+                <!-- <ul id="slideDots" class="list-unstyled slideDots  d-flex justify-content-center">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
+            </div>
+        </div>
+        <div class="subtitle">FEATURED</div>
+        <div class="featured">
+            <ul class="item1">
+                <li class="item1Li" id="item1"><img  src="images/larisa-birta-slbOcNlWNHA-unsplash.jpg" alt=""></li>
+                <li>
+                    <p id="item1P">Supporting the teaching and learning of music
+                        in partnership with four Royal Schools of Music</p>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-end">
+                <ul class="item2">
+                    <li class="item2Li" id="item2"><img  src="images/piano.jpg" alt=""></li>
+                    <li>
+                        <p id="item2P">Listening skills and musical perception through aural tests</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="subtitle">VIDEO</div>
+        <div class="video">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/ehkoZE7BCJU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+
+    </main>
+    <footer class="footer wrapper">
+        <p>©Copyright2020 Music Class</p>
+    </footer>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="js/vegas.min.js"></script>
+        <script src="js/header.js"></script>
+
+        <script src="textillate-master/assets/jquery.lettering.js"></script>
+    <script src="textillate-master/jquery.textillate.js"></script>
+
+
+
+    <script>
+
+        $(function () {
+            $('.tlt').textillate();
+        })
+
+       
+
+
+        $("#slideImages").vegas({
+            timer: true,
+            transition: 'zoomOut2',
+            slides: [
+                { src: "images/activity1.png" },
+                {
+                    src: "images/activity2.png",
+                    transition: 'slideRight2'
+                },
+                { src: "images/activity3.jpg" },
+                { src: "images/activity4.png" }
+            ]
+        });
+
+
+     
+        // let pageHight=$("body").height();
+        // let windowHight=$(window).height();
+
+
+
+        function isMobile() {
+
+        try{ document.createEvent("TouchEvent"); return true; }
+
+        catch(e){ return false;}
+
+        }
+
+        if(isMobile()){
+            $(window).scroll(function(){
+            // let scrollTop=$(this).scrollTop();
+            // let scrollPercent=(scrollTop1/(pageHight-windowHight))*100;
+            // scrollPercent=Math.round(scrollPercent)+"%"
+            // console.log(scrollPercent)
+
+
+     
+            // console.log("scroll")
+            let scrollTop=$(this).scrollTop()
+            // console.log(scrollTop)
+
+            if (scrollTop<=250){
+                $("#item1").addClass("opacity")
+            }else{
+                $("#item1").removeClass("opacity")
+            }
+
+
+            if (scrollTop<=400){
+                $("#item1P").addClass("opacity")
+            }else{
+                $("#item1P").removeClass("opacity")
+            }
+
+            if (scrollTop<=500){
+                $("#item2").addClass("opacity")
+            }else{
+                $("#item2").removeClass("opacity")
+            }
+
+            
+       
+
+            if (scrollTop<=800){
+                $("#item2P").addClass("opacity")
+            }else{
+                $("#item2P").removeClass("opacity")
+            }
+
+        })
+        }
+
+        else{
+            $(window).scroll(function(){
+            // let scrollTop=$(this).scrollTop();
+            // let scrollPercent=(scrollTop1/(pageHight-windowHight))*100;
+            // scrollPercent=Math.round(scrollPercent)+"%"
+            // console.log(scrollPercent)
+
+
+     
+            // console.log("scroll")
+            let scrollTop=$(this).scrollTop()
+            // console.log(scrollTop)
+
+            if (scrollTop<=800){
+                $("#item1").toggleClass("opacity")
+            }else{
+                $("#item1").removeClass("opacity")
+            }
+
+
+            if (scrollTop<=1000){
+                $("#item1P").addClass("opacity")
+            }else{
+                $("#item1P").removeClass("opacity")
+            }
+
+            if (scrollTop<=1200){
+                $("#item2").addClass("opacity")
+            }else{
+                $("#item2").removeClass("opacity")
+            }
+
+            
+       
+
+            if (scrollTop<=1600){
+                $("#item2P").addClass("opacity")
+            }else{
+                $("#item2P").removeClass("opacity")
+            }
+
+        })
+        }
+        
+
+
+   
+
+    </script>
+</body>
+
+</html>

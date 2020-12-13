@@ -1,0 +1,201 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000000;
+
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            justify-content: space-between;
+            background: #000000;
+        }
+
+        .headerBg {
+            /* height: 640px; */
+            /* background-size: cover; */
+            position: relative;
+
+        }
+
+        .headerBg .bgi {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        nav {
+            transition: .8s;
+        }
+
+        nav.hideNav {
+            transform: translateY(-155px);
+            background: transparent;
+
+        }
+
+        .wrapper .top {
+            width: 100%;
+            /* display: block; */
+            position: fixed;
+            top: 0;
+            z-index: 1;
+
+        }
+
+
+        .header1 {
+            max-width: 960px;
+            display: flex;
+            justify-content: space-between;
+            background: #22180e83;
+
+
+
+        }
+
+        .header1 .logo {
+            display: flex;
+            margin: 5px;
+
+
+        }
+
+        .header1 .logo .musicFigure {
+            width: 37px;
+            height: 43px;
+            overflow: hidden;
+            /* margin: 0; */
+            margin: 5px 10px;
+
+
+
+        }
+
+        .header1 .logo h1 {
+            margin: 0;
+            background: linear-gradient(to right, #D58C4B, #ffcb98, #D58C4B, #ffcb98);
+            color: transparent;
+            -webkit-background-clip: text;
+            /* font-family: 'Great Vibes', cursive; */
+        }
+
+        .header1 .logo .musicFigure .musicImg {
+            height: 100%;
+            width: 100%;
+            /* width: 37px;
+            height: 37px; */
+            /* color: #D58C4B; */
+        }
+
+        .header1 .menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .header1 .menu li {
+            flex-direction: column;
+
+            margin: 10px 20px;
+        }
+
+        .header1 .menu li a {
+            color: #F5B174;
+        }
+
+
+
+        .transition {
+            transition: 0.4s;
+        }
+
+        .menu2 {
+            display: none;
+            /* width: 800px; */
+            margin: 0 auto
+        }
+
+        .menu2-1 {
+            display: inline-block;
+            cursor: pointer;
+            padding: 0 0 0 2px;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bar {
+            width: 36px;
+            height: 6px;
+            background: #F5B174;
+            margin: 6px 0;
+            border-radius: 2px;
+        }
+
+        .active .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+            transform: rotate(-45deg) translate(-9px, 7px);
+        }
+
+        .active .bar2 {
+            opacity: 0;
+        }
+
+        .active .bar3 {
+            -webkit-transform: rotate(45deg) translate(-9px, -8px);
+            transform: rotate(45deg) translate(-9px, -8px);
+        }
+
+        .menu2-1.active ul {
+            opacity: 1;
+            max-height: 300px;
+            margin-left: -60px;
+            margin-top: 16px;
+        }
+
+        .menu2-1 ul {
+            background: #22180ea8;
+            position: absolute;
+            transition: .4s;
+            opacity: 0;
+            overflow: hidden;
+            max-height: 0;
+        }
+
+        .menu2-1 ul li a {
+            display: block;
+            padding: 6px 10px;
+            text-decoration: none;
+            color: #F5B174;
+
+        }
+
+        .menu2-1 ul li a:hover {
+            /* background: #593a1e85; */
+            border-bottom: 1px solid #F5B174;
+        }
+
+        @media screen and (max-width: 576px) {
+            .header1 .logo h1 {
+                font-size: 1.5rem;
+            }
+
+            .titleA {
+                display: none;
+            }
+
+            .menu2 {
+                display: block;
+            }
+        }
+    

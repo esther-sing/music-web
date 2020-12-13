@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>teacher</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="stylesheet" href="textillate-master/assets/animate.css">
+
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <style>
+        .main h2 {
+            color: #F5B174;
+            padding: 200px 50px 0 50px;
+        }
+
+        .main .boxL {
+            width: 200px;
+            border: 2px solid #F5B174;
+            margin: 2px 40px 0 40px;
+        }
+
+        /* .main .teacherbg {
+            display: block;
+            position: relative;
+            max-width: 800px;
+            height: 400px;
+            background: #140E09;
+        } */
+
+        .main .teacher {
+            /* width: 900px; */
+            /* position: absolute;
+            left: 50%;
+            top: 50%; */
+            /* margin: -230px 0 0 -356px; */
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* background: #140E09; */
+            padding: 30px 0;
+
+        }
+
+        #violin,
+        #pianoP,
+        #guitar {
+            transition: .5s;
+            opacity: 0;
+            transform: translateX(-400px);
+        }
+
+        #violinP,
+        #piano,
+        #guitarP {
+            transition: .5s;
+            opacity: 0;
+            transform: translateX(400px);
+        }
+
+        #violin.opacity {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        #violinP.opacity {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+
+
+        #pianoP.opacity {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        #piano.opacity {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        #guitar.opacity {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        #guitarP.opacity {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .main .introLi {
+            max-width: 500px;
+            max-height: 700px;
+            /* overflow: hidden; */
+        }
+
+
+        .main .introImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 
+        .introduction{
+            background-color: rgb(92, 63, 63);
+            background-attachment: fixed;
+            display: table;
+        } */
+
+        .main .introduction h4 {
+            color: #D58C4B;
+        }
+
+        .main .introduction p {
+            color: #F5B174;
+        }
+
+        .teacherC {
+            display: none;
+        }
+
+        .pop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 40px 0;
+
+        }
+
+        .pop .line {
+            width: 50%;
+            height: 0;
+            border: 2px solid #3D2817;
+        }
+
+        .pop p {
+            color: #F5B174;
+            font-size: 1.5rem;
+            margin: 0 5px;
+        }
+
+        .popitem {
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            color: #F5B174;
+        }
+
+        .popitem .itemLi {
+            max-width: 250px;
+            /* max-height: 200px; */
+            overflow: hidden;
+        }
+        .popitem .itemLi:hover{
+            filter:brightness(120%) drop-shadow(0 0 10px #F5B174)
+        }
+
+        .popitem p {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .popitem .itemLi img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .footer {
+            background: #140E09;
+
+        }
+
+        .footer p {
+            color: #D58C4B;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 576px) {
+            .main h2 {
+                padding: 150px 50px 0 50px;
+            }
+
+            .main .teacher {
+                flex-direction: column;
+            }
+
+            .popitem {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+        #violin1P,
+        #pianoP,
+        #guitar1P {
+            transition: .5s;
+            opacity: 0;
+            transform: translateY(-400px);
+        }
+
+        #violinP,
+        #piano,
+        #guitarP {
+            transition: .5s;
+            opacity: 0;
+            transform: translateY(400px);
+        }
+
+        #violin1P.opacity {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #violinP.opacity {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+        #pianoP.opacity {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #piano.opacity {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #guitar1P.opacity {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #guitarP.opacity {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+
+
+            .teacherM {
+                display: none;
+            }
+
+            .teacherC,
+            .teacher2 {
+                display: block;
+            }
+
+            h4 {
+                padding: 30px 0 20px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class=" wrapper">
+        <nav class="top">
+            <div class="header1">
+                <div class="logo">
+                    <figure class="musicFigure"><img class="musicImg" src="icon/itunes-note-brands2.png" alt="">
+                    </figure>
+                    <a class="home " href="index.html" style="text-decoration:none;">
+                        <h1>ROYAL ACADEMY <br> OF MUSIC</h1>
+                    </a>
+                </div>
+                <div class="menu">
+                    <li class="titleA"><a href="class.html">CLASS</a></li>
+                    <li class="titleA"><a href="teacher.html">TEACHERS</a></li>
+                    <li class="titleA"><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <div class="menu2">
+                            <div class="menu2-1">
+                                <div class="bar bar1 transition"></div>
+                                <div class="bar bar2 transition"></div>
+                                <div class="bar bar3 transition"></div>
+                                <ul>
+                                    <li><a href="class.html">CLASS</a></li>
+                                    <li><a href="teacher.html">TEACHERS</a></li>
+                                    <li><a href="about.html">ABOUT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main class="main wrapper">
+        <h2 class="tlt" data-in-effect="flash">TEACHERS</h2>
+        <div class="boxL"></div>
+        <!-- <div class="teacherbg"></div> -->
+        <ul class="teacher">
+            <li class="introduction teacherM " id="violin">
+                <h4>Ethan</h4>
+                <p>教學項目:小提琴<br><br>
+
+                    英國皇家伯明罕音樂學院<br><br>
+
+                    熱愛表演，曾在英國、上海、<br><br>
+
+                    奧地利等地表演，於交響樂團<br><br>
+
+                    等各類型演出</p>
+            </li>
+            <li class="introLi" id="violinP"><img class="introImg" src="images/joel-wyncott-BsI21AqBeIk-unsplash.jpg"
+                    alt=""></li>
+            <li class="introduction teacherC" id="violin1P">
+                <h4>Ethan</h4>
+                <p>教學項目:小提琴<br><br>
+
+                    英國皇家伯明罕音樂學院<br><br>
+
+                    熱愛表演，曾在英國、上海、<br><br>
+
+                    奧地利等地表演，於交響樂團<br><br>
+
+                    等各類型演出</p>
+            </li>
+
+        </ul>
+        <ul class="teacher">
+            <li class="introLi" id="pianoP"><img class="introImg" src="images/george-coletrain-uiyse12Hu14-unsplash.jpg"
+                    alt="">
+            </li>
+            <li class="introduction teacher2" id="piano">
+                <h4>Joe</h4>
+                <p>教學項目:鋼琴 <br><br>
+
+                    德國漢堡音樂戲劇學院<br><br>
+
+                    以鋼琴獨奏、室內樂重奏活耀舞台<br><br>
+
+                    自15歲起定期舉辦個人獨奏會<br><br>
+
+                </p>
+            </li>
+        </ul>
+        <ul class="teacher">
+            <li class="introduction teacherM" id="guitar">
+                <h4>Lucas</h4>
+                <p>教學項目:吉他<br><br>
+
+                    美國MI(Musicians Institute)GIT <br><br>
+
+                    擅長藍調、流行風格，多年經驗，<br><br>
+
+                    全國校際吉他競賽，客製化模式
+
+                    教學
+
+                </p>
+            </li>
+            <li class="introLi" id="guitarP"><img class="introImg" src="images/guitar.jpg" alt=""></li>
+            <li class="introduction teacherC" id="guitar1P">
+                <h4>Lucas</h4>
+                <p>教學項目:吉他<br><br>
+
+                    美國MI(Musicians Institute)GIT <br><br>
+
+                    擅長藍調、流行風格，多年經驗，<br><br>
+
+                    全國校際吉他競賽，客製化模式
+
+                    教學
+
+                </p>
+            </li>
+
+        </ul>
+        <div class="pop">
+            <div class="line"></div>
+            <p>POP</p>
+            <div class="line"></div>
+        </div>
+        <div class="popitem ">
+            <ul class="item">
+                <!-- <li class="itemLi"><img src="images/keyboard.jpg" alt=""></li> -->
+                <li>
+                    <a href="images/keyboard.jpg" data-lightbox="images-1" data-title="KEYBOARD"><img class="itemLi"
+                            src="images/keyboard.jpg" alt=""></a>
+                    <p>KEYBOARD</p>
+                </li>
+            </ul>
+            <ul class="item ">
+                <!-- <li class="itemLi"><img src="images/andrija-radojevic-KSQ0gvQabqM-unsplash.jpg" alt=""></li> -->
+                <li>
+                    <a href="images/andrija-radojevic-KSQ0gvQabqM-unsplash.jpg" data-lightbox="images-1"
+                        data-title="DRUM"><img class="itemLi" src="images/andrija-radojevic-KSQ0gvQabqM-unsplash.jpg"
+                            alt=""></a>
+                    <p>DRUM</p>
+                </li>
+            </ul>
+            <ul class="item">
+                <!-- <li class="itemLi"><img src="images/louis-smith-jl2LgYyDCNo-unsplash.jpg" alt=""></li> -->
+                <li>
+
+                    <a href="images/louis-smith-jl2LgYyDCNo-unsplash.jpg" data-lightbox="images-1"
+                        data-title="COMPOSE"><img class="itemLi" src="images/louis-smith-jl2LgYyDCNo-unsplash.jpg"
+                            alt=""></a>
+
+                    <p>COMPOSE</p>
+                </li>
+            </ul>
+        </div>
+        <div class="popitem ">
+            <ul class="item">
+                <!-- <li class="itemLi"><img src="images/elizeu-dias-aZ3qiq1eTRk-unsplash.jpg" alt=""></li> -->
+                <li>
+                    <a href="images/elizeu-dias-aZ3qiq1eTRk-unsplash.jpg" data-lightbox="images-1"
+                        data-title="COMPOSE"><img class="itemLi" src="images/elizeu-dias-aZ3qiq1eTRk-unsplash.jpg"
+                            alt=""></a>
+                    <p>SING</p>
+                </li>
+            </ul>
+            <ul class="item ">
+                <!-- <li class="itemLi"><img src="images/marcos-luiz-photograph-VYKYjGubbh0-unsplash.jpg" alt=""></li> -->
+                <li>
+
+                    <a href="images/marcos-luiz-photograph-VYKYjGubbh0-unsplash.jpg" data-lightbox="images-1"
+                        data-title="COMPOSE"><img class="itemLi"
+                            src="images/marcos-luiz-photograph-VYKYjGubbh0-unsplash.jpg" alt=""></a>
+                    <p>ELECTRIC GUITAR</p>
+                </li>
+            </ul>
+            <ul class="item">
+                <!-- <li class="itemLi"><img src="images/cajon.jpg" alt=""></li> -->
+                <li>
+                    <a href="images/cajon.jpg" data-lightbox="images-1" data-title="COMPOSE"><img class="itemLi"
+                            src="images/cajon.jpg" alt=""></a>
+
+                    <p>CAJON</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer wrapper">
+        <p>©Copyright2020 Music Class</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+
+    <script src="js/header.js"></script>
+
+    <script src="textillate-master/assets/jquery.lettering.js"></script>
+    <script src="textillate-master/jquery.textillate.js"></script>
+
+    <script src="js/lightbox.js"></script>
+    <script>
+        $(function () {
+            $('.tlt').textillate();
+        })
+
+
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': 'page %1 of %2 '
+        })
+
+
+
+
+        function isMobile() {
+
+            try { document.createEvent("TouchEvent"); return true; }
+
+            catch (e) { return false; }
+
+        }
+
+        if (isMobile()) {
+            $(window).scroll(function () {
+
+                let scrollTop = $(this).scrollTop()
+                console.log(scrollTop)
+
+                if (scrollTop >= 0) {
+                    $("#violinP").addClass("opacity")
+                } else {
+                    $("#violinP").removeClass("opacity")
+                }
+
+
+                if (scrollTop >= 125) {
+                    $("#violin1P").addClass("opacity")
+                } else {
+                    $("#violin1P").removeClass("opacity")
+                }
+
+                if (scrollTop >= 375) {
+                    $("#pianoP").addClass("opacity")
+                } else {
+                    $("#pianoP").removeClass("opacity")
+                }
+
+                if (scrollTop >= 425) {
+                    $("#piano").addClass("opacity")
+                } else {
+                    $("#piano").removeClass("opacity")
+                }
+
+
+                if (scrollTop >= 1000) {
+                    $("#guitarP").addClass("opacity")
+                } else {
+                    $("#guitarP").removeClass("opacity")
+                }
+
+                if (scrollTop >= 1100) {
+                    $("#guitar1P").addClass("opacity")
+                } else {
+                    $("#guitar1P").removeClass("opacity")
+                }
+
+
+
+
+            })
+        }
+
+        else {
+            $(window).scroll(function () {
+
+                let scrollTop = $(this).scrollTop()
+                console.log(scrollTop)
+
+                if (scrollTop >= 30) {
+                    $("#violin").addClass("opacity")
+                    $("#violinP").addClass("opacity")
+
+                }
+
+
+                if (scrollTop >= 200) {
+                    $("#pianoP").addClass("opacity")
+                    $("#piano").addClass("opacity")
+
+
+                }
+
+                if (scrollTop >= 500) {
+                    $("#guitarP").addClass("opacity")
+                    $("#guitar").addClass("opacity")
+
+                }
+
+
+
+
+                // if (scrollTop<=1600){
+                //     $("#item2P").addClass("opacity")
+                // }else{
+                //     $("#item2P").removeClass("opacity")
+                // }
+
+            })
+        }
+    </script>
+
+
+</body>
+
+</html>

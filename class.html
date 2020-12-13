@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>class</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="textillate-master/assets/animate.css">
+    <style>
+        .pianokey {
+            margin: 150px auto;
+            margin-bottom: 0;
+        }
+
+        .all {
+            padding: 0px;
+            width: 800px;
+            height: 170px;
+            /* border:solid 1px rgb(255, 204, 163); */
+            margin: 0 auto;
+            position: relative;
+            background-color: black;
+        }
+
+        .white,
+        .black {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            width: 42px;
+            height: 170px;
+            background: rgb(0, 0, 0);
+            float: left;
+            border-right: solid 2px rgb(247, 177, 117);
+            border-radius: 0px 0px 10px 10px;
+            text-align: center;
+            /* line-height:35em; */
+        }
+
+        .whiteL {
+            border-left: solid 2px rgb(247, 177, 117);
+
+        }
+
+        .black {
+            margin: 0px;
+            padding: 0px;
+            width: 32px;
+            height: 100px;
+            background: rgb(255, 183, 120);
+            border: #F5B174;
+            border-radius: 0px 0px 10px 10px;
+            left: 10px;
+            top: 0px;
+            position: absolute;
+        }
+
+
+        .main h2 {
+            color: #F5B174;
+            padding: 100px 50px 0 50px;
+        }
+
+        .main .boxL {
+            width: 200px;
+            border: 2px solid #F5B174;
+            margin: 2px 40px 0 40px;
+        }
+
+
+
+        .classItem ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .classItem li h4 {
+            color: #D58C4B;
+        }
+
+        .classItem li p {
+            color: #F5B174;
+            margin: 0 100px;
+        }
+
+        .classItem .pianoC,
+        .violinC {
+            color: #D58C4B;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: -20px;
+            display: none;
+        }
+
+        .classItem .viloinC {
+            display: none;
+        }
+
+        .piano {
+            margin: 50px 0;
+            background: #140E09;
+        }
+
+        #pianoP {
+            transition: .5s;
+            transform: translatey(400px);
+            opacity: 0
+        }
+
+        #pianoP.opacity {
+            transform: translatey(0);
+            opacity: 1;
+
+        }
+
+        #pianoL {
+            opacity: 0;
+            transition: .5s;
+            transform: translatey(-200px);
+        }
+
+        #pianoL.opacity {
+            opacity: 1;
+            transform: translatey(0);
+        }
+
+
+        #viloinCP {
+            transition: .5s;
+        }
+
+        #viloinCP.trans {
+            opacity: 0;
+            transform: translateX(-400px);
+        }
+
+        #violinP {
+            transition: .5s;
+
+        }
+
+        #violinP.opacity {
+            opacity: 0;
+
+        }
+
+        #violinL {
+            transition: .5s;
+            opacity: 0;
+            transform: translateX(-400px);
+
+
+        }
+
+        #violinL.opacity1 {
+            opacity: 1;
+            transform: translateX(0);
+
+
+        }
+
+        .classItem .pianoLi,
+        .violivLi {
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+            margin: 50px;
+        }
+
+
+
+        .classItem Img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .others {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 40px 0;
+
+        }
+
+        .others .line {
+            width: 30%;
+            height: 0;
+            border: 2px solid #3D2817;
+        }
+
+        .others p {
+            color: #F5B174;
+            font-size: 1.5rem;
+            margin: 0 5px;
+        }
+
+        .othersItem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .othersItem p {
+            color: #F5B174;
+            text-align: center;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .othersItem1 .guitarLi,
+        .singLi {
+            max-width: 380px;
+            max-height: 250px;
+            overflow: hidden;
+        }
+
+        .guitarLi,
+        .singLi,
+        .keyboard,
+        .drum,
+        .compose {
+            opacity: 0;
+            transition: .8s;
+        }
+
+        .guitarLi.opacity1 {
+            opacity: 1;
+        }
+
+        .singLi.opacity1 {
+            opacity: 1;
+        }
+
+        .keyboard.opacity1 {
+            opacity: 1;
+        }
+
+        .drum.opacity1 {
+            opacity: 1;
+        }
+
+        .compose.opacity1 {
+            opacity: 1;
+        }
+
+        .guitarLi:hover,
+        .singLi:hover,
+        .ItemLi:hover {
+            filter: brightness(130%) drop-shadow(0 0 10px #F5B174);
+            /* drop-shadow(0 0 10px #F5B174) */
+            /* box-shadow:0 0 10px #F5B174 ; */
+        }
+
+        .othersItem1,
+        .othersItem2 {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        .othersItem2 {
+            background: #140E09;
+            padding: 30px 0;
+        }
+
+        .othersItem2 .ItemLi {
+            max-width: 250px;
+            max-height: 150px;
+            overflow: hidden;
+        }
+
+        .footer {
+            background: #000000;
+
+        }
+
+        .footer p {
+            color: #D58C4B;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+
+
+
+        @media screen and (max-width: 576px) {
+
+            .pianokey {
+                display: none;
+            }
+
+            .main h2 {
+                padding: 150px 50px 0 50px;
+            }
+
+            .classItem .pianoC,
+            .violinC {
+                display: block;
+
+            }
+
+            .classItem h4 {
+                display: none;
+            }
+
+            .classItem ul {
+                flex-direction: column;
+            }
+
+            .classItem .viloinC {
+                color: #F5B174;
+                display: block;
+            }
+
+            .classItem .viloinCP {
+                display: none;
+            }
+
+            .classItem p {
+                padding-bottom: 30px;
+            }
+
+
+            .othersItem1,
+            .othersItem2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class=" wrapper">
+        <nav class="top">
+            <div class="header1">
+                <div class="logo">
+                    <figure class="musicFigure"><img class="musicImg" src="icon/itunes-note-brands2.png" alt="">
+                    </figure>
+                    <a class="home" href="index.html" style="text-decoration:none;">
+                        <h1>ROYAL ACADEMY <br> OF MUSIC</h1>
+                    </a>
+                </div>
+                <div class="menu">
+                    <li class="titleA"><a href="class.html">CLASS</a></li>
+                    <li class="titleA"><a href="teacher.html">TEACHERS</a></li>
+                    <li class="titleA"><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <div class="menu2">
+                            <div class="menu2-1">
+                                <div class="bar bar1 transition"></div>
+                                <div class="bar bar2 transition"></div>
+                                <div class="bar bar3 transition"></div>
+                                <ul>
+                                    <li><a href="class.html">CLASS</a></li>
+                                    <li><a href="teacher.html">TEACHERS</a></li>
+                                    <li><a href="about.html">ABOUT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="pianokey wrapper ">
+
+        <ul class="all">
+            <li class="white whiteL"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="white"></li>
+            <li class="black" style="left:24px;"></li>
+            <li class="black" style="left:65px;"></li>
+            <li class="black" style="left:150px;"></li>
+            <li class="black" style="left:192px;"></li>
+            <li class="black" style="left:234px;"></li>
+
+            <li class="black" style="left:318px;"></li>
+            <li class="black" style="left:360px;"></li>
+
+            <li class="black" style="left:444px;"></li>
+            <li class="black" style="left:486px;"></li>
+            <li class="black" style="left:528px;"></li>
+
+            <li class="black" style="left:612px;"></li>
+            <li class="black" style="left:654px;"></li>
+            <li class="black" style="left:738px;"></li>
+        </ul>
+
+
+
+
+    </div>
+    <main class="main wrapper">
+        <h2 class="tlt" data-in-effect="flash">CLASS</h2>
+        <div class="boxL"></div>
+        <div class="classItem piano">
+            <ul>
+                <li class="pianoC">PIANO</li>
+                <li class="pianoLi" id="pianoP"><img class="pianoImg" src="images/piano.jpg" alt=""></li>
+                <li>
+                    <h4>PIANO</h4>
+                    <p id="pianoL">適合年齡:10歲以上<br><br>
+
+                        費用:每堂1000~1500<br><br>
+
+                        一對一教學，每堂60分鐘<br><br>
+
+                        專業教材、檢定</p>
+                </li>
+            </ul>
+        </div>
+        <div class="classItem violin">
+            <ul>
+                <li>
+                    <h4>VIOLIN</h4>
+
+                    <p class="viloinCP" id="viloinCP">適合年齡:15歲以上<br><br>
+
+                        費用:每堂1000~1500<br><br>
+
+                        一對一教學，每堂60分鐘<br><br>
+
+                        專業教材、檢定</p>
+                </li>
+                <li class="violinC">VIOLIN</li>
+
+                <li class="violivLi" id="violinP"><img src="images/michel-catalisano-OZDmI-vO7Io-unsplash.jpg" alt="">
+                </li>
+                <p class="viloinC" id="violinL">適合年齡:15歲以上<br><br>
+
+                    費用:每堂1000~1500<br><br>
+
+                    一對一教學，每堂60分鐘<br><br>
+
+                    專業教材、檢定</p>
+
+            </ul>
+        </div>
+        <div class="others">
+            <div class="line"></div>
+            <p>OTHERS</p>
+            <div class="line"></div>
+        </div>
+        <div class="othersItem">
+            <div class="othersItem1">
+                <ul class="guitar">
+                    <li class="guitarLi"> <img src="images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg" alt=""></li>
+                    <li>
+                        <p>GUITAR</p>
+                    </li>
+
+
+                </ul>
+                <ul class="sing">
+                    <li class="singLi">
+                        <img src="images/sing.jpg" alt="">
+                    </li>
+                    <li>
+                        <p>SING</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="othersItem2">
+                <ul class="Item">
+                    <li class="ItemLi keyboard"> <img src="images/luis-morera-Eskj7IiXNsE-unsplash.jpg" alt=""></li>
+                    <li>
+                        <p>KEYBOARD</p>
+                    </li>
+                </ul>
+                <div class="Item">
+                    <li class="ItemLi drum"> <img src="images/josh-sorenson-MjIMc6uhwrE-unsplash.jpg" alt=""></li>
+
+                    <li>
+                        <p>DRUM</p>
+                    </li>
+                </div>
+                <div class="Item">
+                    <li class="ItemLi compose"> <img src="images/james-stamler-k3heD_KwH0A-unsplash.jpg" alt=""></li>
+
+                    <li>
+                        <p>COMPOSE</p>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer wrapper">
+        <p>©Copyright2020 Music Class</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/header.js"></script>
+    <script src="textillate-master/assets/jquery.lettering.js"></script>
+    <script src="textillate-master/jquery.textillate.js"></script>
+
+    <script>
+        $(function () {
+            $('.tlt').textillate();
+        })
+
+
+
+
+        $(".black").mousedown(function () {
+            $(this).css({
+                "background":"radial-gradient(circle at 20% 100% ,white , #F5B174 )",
+                "box-shadow": "0 4px 8px white"
+
+            })
+        })
+
+        $(".black").mouseup(function () {
+            $(this).css({
+                "background": "#F5B174",
+                "box-shadow": "0 4px 8px transparent"
+        })
+
+        })
+
+
+
+        $(".white").mousedown(function () {
+            $(this).css({
+                "background": "radial-gradient(circle at 50% 100% , white ,#F5B174 )",
+                "box-shadow": "0 4px 8px white"
+
+            })
+        })
+
+        $(".white").mouseup(function () {
+            $(this).css({
+                "background": "black",
+                "box-shadow": "0 4px 8px transparent"
+            })
+
+        })
+
+
+
+
+        function isMobile() {
+
+            try { document.createEvent("TouchEvent"); return true; }
+
+            catch (e) { return false; }
+
+        }
+
+        if (isMobile()) {
+            $(window).scroll(function () {
+                // let scrollTop=$(this).scrollTop();
+                // let scrollPercent=(scrollTop1/(pageHight-windowHight))*100;
+                // scrollPercent=Math.round(scrollPercent)+"%"
+                // console.log(scrollPercent)
+
+
+
+                // console.log("scroll")
+                let scrollTop = $(this).scrollTop()
+                console.log(scrollTop)
+
+                if (scrollTop >= 30) {
+                    $("#pianoP").addClass("opacity")
+                }
+
+
+                if (scrollTop >= 150) {
+                    $("#pianoL").addClass("opacity")
+                } else {
+                    $("#pianoL").removeClass("opacity")
+                }
+
+                if (scrollTop <= 500) {
+                    $("#violinP").addClass("opacity")
+                } else {
+                    $("#violinP").removeClass("opacity")
+                }
+
+
+
+
+                if (scrollTop >= 800) {
+                    $("#violinL").addClass("opacity1")
+                }
+
+                if (scrollTop >= 1100) {
+                    $(".guitarLi").addClass("opacity1")
+                }
+
+                if (scrollTop >= 1300) {
+                    $(".singLi").addClass("opacity1")
+                }
+
+                if (scrollTop >= 1500) {
+                    $(".keyboard").addClass("opacity1")
+                }
+
+                if (scrollTop >= 1700) {
+                    $(".drum").addClass("opacity1")
+                }
+
+                if (scrollTop >= 2000) {
+                    $(".compose").addClass("opacity1")
+                }
+
+            })
+        }
+
+        else {
+            $(window).scroll(function () {
+                // let scrollTop=$(this).scrollTop();
+                // let scrollPercent=(scrollTop1/(pageHight-windowHight))*100;
+                // scrollPercent=Math.round(scrollPercent)+"%"
+                // console.log(scrollPercent)
+
+
+
+                // console.log("scroll")
+                let scrollTop = $(this).scrollTop()
+                console.log(scrollTop)
+
+                if (scrollTop >= 30) {
+                    $("#pianoP").addClass("opacity")
+
+                }
+
+
+                if (scrollTop >= 175) {
+                    $("#pianoL").addClass("opacity")
+                }
+
+                if (scrollTop <= 400) {
+                    $("#violinP").css({
+                        "transform": "translateX(400px)",
+                        "opacity": "0"
+                    })
+                } else {
+                    // $("#violinP").removeClass("opacity")
+                    $("#violinP").css({
+                        "transform": "translateX(0)",
+                        "opacity": "1"
+                    })
+                }
+
+
+
+
+                if (scrollTop <= 400) {
+                    $("#viloinCP").addClass("trans")
+                } else {
+                    $("#viloinCP").removeClass("trans")
+                }
+
+
+
+                if (scrollTop >= 650) {
+                    $(".guitarLi").addClass("opacity1")
+                }
+
+                if (scrollTop >= 800) {
+                    $(".singLi").addClass("opacity1")
+                }
+
+                if (scrollTop >= 1025) {
+                    $(".keyboard").addClass("opacity1")
+                }
+
+                if (scrollTop >= 1100) {
+                    $(".drum").addClass("opacity1")
+                }
+
+                if (scrollTop >= 1100) {
+                    $(".compose").addClass("opacity1")
+                }
+
+
+            })
+        }
+    </script>
+</body>
+
+</html>
